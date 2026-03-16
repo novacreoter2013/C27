@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<p id="product_value"></p>
+<button onclick="ascending()"> TAP TO CHANGE IT IN ASCENDING ORDER </button> <br><br><br>
+<button onclick="descending()"> TAP TO CHANGE IT IN DESCENDING ORDER </button>
+
+<script>
+
+var numbers = [27,12,10,13,5,9];
+
+function myfunction(num) {
+    return num * 10;                                    
+}
+
+var num = numbers.map(myfunction);
+document.getElementById("product_value").innerHTML = num;
+
+function ascending() {
+num.sort(function(a,b){return a-b});
+document.getElementById("product_value").innerHTML = num;
+}
+
+
+function descending() {
+num.sort(function(a,b){return b-a});
+document.getElementById("product_value").innerHTML = num;
+}
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>
